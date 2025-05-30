@@ -1,0 +1,18 @@
+@use "./variables.scss" as v;
+@use "./header/nav";
+@use "./header/hamburger-modal";
+@use "./header/menu-items";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: v.$font-primary;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}

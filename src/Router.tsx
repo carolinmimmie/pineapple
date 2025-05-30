@@ -1,0 +1,22 @@
+import { createBrowserRouter } from "react-router-dom";
+import Layout from "./pages/Layout";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import Bookings from "./pages/Bookings";
+import Menu from "./pages/Menu";
+import About from "./pages/About";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <NotFound />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/home", element: <Home /> },
+      { path: "/bookings", element: <Bookings /> },
+      { path: "/menu", element: <Menu /> },
+      { path: "/about", element: <About /> },
+    ],
+  },
+]);
