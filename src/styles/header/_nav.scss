@@ -1,0 +1,75 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.nav {
+    background-color: v.$primary-color;
+    padding:15px;
+
+    @include m.forSize(desktop) {
+        height:100vh;
+        width:20%;
+        position:relative;
+
+      }
+  
+    &__mobile-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    &__hamburger-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: v.$secondary-text-color;
+  
+      @include m.forSize(desktop) {
+        display: none;
+      }
+    }
+  
+    &__logo {
+      h1 {
+        margin: 0;
+        a {
+          font-family: 'Pacifico', cursive;
+          font-style: normal;
+          font-size: 28px;
+          color: v.$secondary-text-color;
+          letter-spacing: 1.2px;
+          text-decoration: none;
+          @include m.forSize(desktop) {
+            font-size: 42px;
+            position:absolute;
+            top:80px;
+            right:-50px;
+          }
+        }
+      }
+    }
+  
+    &__insta {
+      font-size: 24px;
+      color: v.$primary-text-color;
+      @include m.forSize(desktop) {
+        display: none;
+      }
+    }
+  
+    &__menu-items {
+      display: none;
+  
+      @include m.forSize(desktop) {
+        display: block;
+      }
+    }
+    &__hamburger-modal{
+
+      @include m.forSize(desktop) {
+        display: none;
+      }
+
+    }
+  }
+  

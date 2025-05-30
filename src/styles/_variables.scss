@@ -3,7 +3,7 @@ $primary-color: rgb(175 205 215) ;
 
 // Text Färg
 $primary-text-color:  rgb(12 48 124 );
-$alt-prim-text-color: rgb(242 143 25) ;
+$secondary-text-color: rgb(242 143 25) ;
 
 // Fonts
 $font-primary: Gotham Round, sans-serif;
@@ -20,4 +20,5 @@ $font-size-undertitle: 1.5rem;
 $font-size-title: 2rem;
 
 $desktop: 1000px;
-$tablet: 768px;
+$tablet: 767px;
+$mobile: 667px;
