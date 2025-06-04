@@ -1,55 +1,53 @@
 @use "../variables" as v;
 @use "../mixins" as m;
-.menu-items{
-    padding:12px;
-    font-family: 'Pacifico', cursive;
+.menu-items {
+  padding: 12px;
+  font-family: "Pacifico", cursive;
 
+  @include m.forSize(desktop) {
+    margin: 180px 20px;
+    padding: 0px 62px 0px 0px;
+    
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
     @include m.forSize(desktop) {
-        margin: 120% 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
 
-        
-
-      }
-    ul{
-        display: flex;
-        justify-content: space-between;
-        @include m.forSize(desktop) {
-            display: flex;
-            flex-direction: column;
-            gap:22px;
-
-        }
-
-        li{
+    li {
       list-style: none;
       border-bottom: 1px solid v.$primary-text-color;
+
       @include m.forSize(desktop) {
-      font-size: 1.6rem;
-      text-align: right;
+        font-size: 1.6rem;
+        text-align: right;
+      }
+  
 
+      a {
+        text-decoration: none;
+        color: v.$primary-text-color;
+      }
+      a:hover {
+        color: v.$secondary-text-color;
+      }
     }
-
-            a{
-                text-decoration: none;
-                color: v.$primary-text-color;
-            }
-            a:hover{
-                color: v.$secondary-text-color;
-            }
-        }
-
+    li:hover {
+        border-bottom: 1px solid v.$secondary-text-color;
+      }
+  }
+  .menu-items-insta {
+    display: none;
+    color: v.$primary-text-color;
+    @include m.forSize(desktop) {
+      display: block;
+      font-size: 38px;
+      text-align: center;
+      padding-top: 50px;
     }
-    .menu-items-insta{
-        display: none;
-        @include m.forSize(desktop) {
-            display: block;
-            font-size:58px;
-            text-align: center;
-            padding-top: 50px;
-
-       
-      
-          }
-
-    }
+  }
 }

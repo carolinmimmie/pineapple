@@ -1,5 +1,6 @@
 // Main Färger
 $primary-color: rgb(175 205 215) ;
+$secondary-color: white ;
 
 // Text Färg
 $primary-text-color:  rgb(12 48 124 );
@@ -15,10 +16,9 @@ $font-semibold: 600;
 $font-bold: 700;
 
 //Font storlekar
-$font-size-base: 1rem;
-$font-size-undertitle: 1.5rem;
-$font-size-title: 2rem;
+$h2: 36px;
+$h3: 16px;
+$h4: 12px;
 
-$desktop: 1000px;
-$tablet: 767px;
+$desktop: 767px;
 $mobile: 667px;

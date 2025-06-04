@@ -3,19 +3,42 @@
 @use "./header/nav";
 @use "./header/hamburger-modal";
 @use "./header/menu-items";
-
+@use "./home.scss";
+@use "./menu.scss";
+@use "./about.scss";
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: v.$font-primary;
-  // background-color: v.$primary-color;
-  color:v.$primary-text-color;
+  background-color: v.$primary-color;
 }
 
-main {
-  width: 90%;
-  margin: auto;
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include m.forSize(desktop) {
+    flex-direction: row;
+  }
+
+  .side-nav {
+    width: 100%;
+
+    @include m.forSize(desktop) {
+      width: 25%;
+    }
+  }
+
+  main {
+    width: 100%;
+
+    @include m.forSize(desktop) {
+      margin: px;
+      width: 75%;
+    }
+  }
 }

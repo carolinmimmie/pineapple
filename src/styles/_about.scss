@@ -1,0 +1,79 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+
+.about {
+  background: v.$secondary-color;
+  padding:0px 18px 88px;
+  color: v.$primary-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; 
+  overflow-y: scroll;
+  @include m.forSize(desktop) {
+    width: 70%;
+    margin-right: auto;
+  }
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:48px;
+
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    h2 {
+      font-size: v.$h2;
+      letter-spacing: 1px;
+      padding: 78px 0px 8px 0px;
+
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-size: v.$font-light;
+     
+        
+   
+    }
+  }
+.about-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 66px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      font-weight: v.$font-bold;
+
+      @include m.forSize(desktop) {
+        gap: 26px;
+      }
+      li {
+        display: flex;
+        font-size: 14px;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 22px;
+        font-size: v.$font-light;
+      }
+    }
+    p {
+        font-size: v.$font-semibold;
+        text-align: center;
+        font-size: v.$font-light;
+        text-transform: uppercase;
+    }
+  }
+}
+}
+

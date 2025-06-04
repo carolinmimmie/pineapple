@@ -4,12 +4,14 @@ import "./../styles/layout.scss";
 
 const Layout = () => {
   return (
-    <>
-      <Nav />
+    <div className="layout-container">
+      <div className="side-nav">
+        <Nav />
+      </div>
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 };
 

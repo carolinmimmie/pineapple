@@ -1,0 +1,114 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+
+.menu {
+    background: v.$secondary-color;
+    padding:0px 18px 88px;
+    color: v.$primary-text-color;
+    display:flex;
+    flex-direction: column;
+    height: 100vh; 
+    overflow-y: scroll;
+    @include m.forSize(desktop) {
+        width:70%;
+        margin-right: auto;
+      }
+
+    h2 {
+        text-align: center;
+        font-size: v.$h2;
+        letter-spacing: 1px;
+        padding:78px 0px 28px 0px;
+        @include m.forSize(desktop) {
+            margin-bottom: 0rem;
+          }
+
+      }
+      .menu-row{
+        width:80%;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        gap:46px;
+        @include m.forSize(desktop) {
+            flex-direction: row;
+            width:100%;
+            margin-bottom:42px;
+            
+  
+          }
+          section{
+            display:flex;
+            flex-direction: column;
+            gap:16px;
+
+   
+            @include m.forSize(desktop) {
+                width:50%;
+                
+      
+              }
+            h3{
+                font-size: v.$h3;
+              }
+              .menu-border{
+                border-bottom: 2px solid v.$primary-text-color;
+              }
+
+          }
+        
+       .menu-container{
+            display:flex;
+            flex-direction: column;
+            gap:16px;
+            @include m.forSize(desktop) {
+            gap:56px;
+              }
+            
+            ul {
+                list-style: none;
+                display:flex;
+                flex-direction: column;
+                gap:16px;
+                @include m.forSize(desktop) {
+                    gap:26px;
+                    }
+                  
+                li {
+                      display: flex;
+                      font-size: 12px;
+                      justify-content: space-between;
+                      align-items: baseline;
+                      gap:22px;
+              
+                        .dish-name{
+                            font-weight: v.$font-bold;
+                        }
+                        .dish-description{
+                            font-weight: v.$font-light;
+                            
+                        }
+                      }
+                    
+                      .price {
+                        font-weight: v.$font-semibold;
+                        white-space: nowrap;
+                        flex-shrink: 0;
+                      }
+          
+                  }
+               
+              }
+
+      }
+   
+  }
+  
+
+  
+
+  
+ 
+  
+ 
+  

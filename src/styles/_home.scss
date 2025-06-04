@@ -1,0 +1,28 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+.home {
+  display: flex;
+  flex-direction: column;
+
+  @include m.forSize(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .image-item {
+    width: 100%;
+    height: 562px;
+
+    @include m.forSize(desktop) {
+      width: 375px;
+      height: 483px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
