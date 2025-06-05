@@ -43,11 +43,16 @@
   .menu-items-insta {
     display: none;
     color: v.$primary-text-color;
+    cursor: pointer;
     @include m.forSize(desktop) {
       display: block;
       font-size: 38px;
       text-align: center;
       padding-top: 50px;
     }
+   
+    }
+    .menu-items-insta:hover {
+      color: v.$secondary-text-color;
   }
 }

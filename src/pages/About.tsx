@@ -3,7 +3,7 @@ const About = () => {
     <div className="about">
       <section>
         <div className="about-text">
-          <h2>Öppettider Pineapple</h2>
+          <h2>Våra tider</h2>
           <p>
             Dyk in när andan faller på – ta en öl efter jobbet, häng med
             kompisar, gå på en spontan dejt eller stilla den där plötsliga

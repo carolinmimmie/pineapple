@@ -21,6 +21,7 @@
     gap:48px;
 
 
+
   .about-text {
     display: flex;
     flex-direction: column;
@@ -30,6 +31,7 @@
       font-size: v.$h2;
       letter-spacing: 1px;
       padding: 78px 0px 8px 0px;
+      text-align: center;
 
     }
     p {
@@ -65,6 +67,7 @@
         align-items: baseline;
         gap: 22px;
         font-size: v.$font-light;
+        text-align: center;
       }
     }
     p {
