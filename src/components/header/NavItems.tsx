@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   { path: "/", label: "Pineapple" },
-  { path: "/menu", label: "Meny" },
-  { path: "/openhours", label: "Öppettider" },
-  { path: "/bookings", label: "Boka bord" },
-  { path: "/contact", label: "Kontakt" },
+  { path: "/meny", label: "Meny" },
+  { path: "/oppet-tider", label: "Öppettider" },
+  { path: "/boka-bord", label: "Boka bord" },
+  { path: "/hitta-hit", label: "Hitta hit" },
 ];
 
 const NavItems = () => {
