@@ -2,9 +2,10 @@
 @use "./mixins.scss" as m;
 @use "./header/nav";
 @use "./header/hamburger-modal";
-@use "./header/menu-items";
+@use "./header/nav-items";
 @use "./home.scss";
-@use "./menu.scss";
+@use "./menu/menu.scss";
+@use "./menu/menu-items.scss";
 @use "./about.scss";
 * {
   margin: 0;

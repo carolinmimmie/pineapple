@@ -1,0 +1,55 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include m.forSize(desktop) {
+    width: 46%;
+  }
+  h3 {
+    font-size: v.$h3;
+  }
+  .menu-items-border {
+    border-bottom: 2px solid v.$primary-text-color;
+  }
+}
+.menu-items-container {
+
+
+  @include m.forSize(desktop) {
+ 
+
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include m.forSize(desktop) {
+      gap: 26px;
+    }
+
+    li {
+      display: flex;
+      font-size: 12px;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 22px;
+
+      .dish-name {
+        font-weight: v.$font-bold;
+      }
+      .dish-description {
+        font-weight: v.$font-light;
+      }
+    }
+
+    .price {
+      font-weight: v.$font-semibold;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+}

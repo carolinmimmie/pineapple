@@ -1,5 +1,5 @@
 import { RxHamburgerMenu } from "react-icons/rx";
-import MenuItems from "./MenuItems";
+import MenuItems from "./NavItems";
 import { NavLink } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";

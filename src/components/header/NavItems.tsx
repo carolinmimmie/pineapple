@@ -9,9 +9,9 @@ const links = [
   { path: "/contact", label: "Kontakt" },
 ];
 
-const MenuItems = () => {
+const NavItems = () => {
   return (
-    <div className="menu-items">
+    <div className="nav-items">
       <ul>
         {links.map(({ path, label }) => (
           <li key={path}>
@@ -19,11 +19,11 @@ const MenuItems = () => {
           </li>
         ))}
       </ul>
-      <div className="menu-items-insta">
+      <div className="nav-items-insta">
         <FaInstagram />
       </div>
     </div>
   );
 };
 
-export default MenuItems;
+export default NavItems;

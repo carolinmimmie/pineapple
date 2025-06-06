@@ -1,6 +1,6 @@
 @use "../variables" as v;
 @use "../mixins" as m;
-.menu-items {
+.nav-items {
   padding: 12px;
   font-family: "Pacifico", cursive;
 
@@ -40,7 +40,7 @@
         border-bottom: 1px solid v.$secondary-text-color;
       }
   }
-  .menu-items-insta {
+  .nav-items-insta {
     display: none;
     color: v.$primary-text-color;
     cursor: pointer;
@@ -52,7 +52,7 @@
     }
    
     }
-    .menu-items-insta:hover {
+    .nav-items-insta:hover {
       color: v.$secondary-text-color;
   }
 }

@@ -1,4 +1,4 @@
-import MenuItems from "./MenuItems";
+import MenuItems from "./NavItems";
 
 // det här är det som syns när man klickar på hamburgerikonen
 export const HamburgerModal = () => {
