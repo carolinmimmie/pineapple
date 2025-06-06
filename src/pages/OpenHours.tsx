@@ -1,8 +1,8 @@
-const About = () => {
+const OpenHours = () => {
   return (
-    <div className="about">
+    <div className="openhours">
       <section>
-        <div className="about-text">
+        <div className="openhours-text">
           <h2>Våra tider</h2>
           <p>
             Dyk in när andan faller på – ta en öl efter jobbet, häng med
@@ -10,7 +10,7 @@ const About = () => {
             hungern. Vi håller dörrarna öppna (nästan) varje dag!
           </p>
         </div>
-        <div className="about-list">
+        <div className="openhours-list">
           <ul>
             <li>Måndag: Stängt (vi laddar upp för resten av veckan)</li>
             <li>Tisdag: 16:00 – 23:00 (lugnet före stormen)</li>
@@ -27,4 +27,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default OpenHours;

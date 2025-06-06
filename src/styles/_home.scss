@@ -3,8 +3,9 @@
 .home {
   display: flex;
   flex-direction: column;
-
   @include m.forSize(desktop) {
+    margin-right: auto;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4rem;
@@ -15,7 +16,7 @@
     height: 562px;
 
     @include m.forSize(desktop) {
-      width: 375px;
+      width: 46%;
       height: 483px;
     }
 

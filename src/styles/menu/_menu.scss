@@ -9,10 +9,6 @@
     flex-direction: column;
     height: 100vh; 
     overflow-y: scroll;
-    @include m.forSize(desktop) {
-        width:70%;
-        margin-right: auto;
-      }
 
     h2 {
         text-align: center;

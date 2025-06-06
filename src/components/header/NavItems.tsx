@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const links = [
   { path: "/", label: "Pineapple" },
   { path: "/menu", label: "Meny" },
-  { path: "/about", label: "Öppettider" },
+  { path: "/openhours", label: "Öppettider" },
   { path: "/bookings", label: "Boka bord" },
   { path: "/contact", label: "Kontakt" },
 ];

@@ -4,8 +4,8 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Bookings from "./pages/Bookings";
 import Menu from "./pages/Menu";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
+import OpenHours from "./pages/OpenHours";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
       { path: "/bookings", element: <Bookings /> },
       { path: "/menu", element: <Menu /> },
       { path: "/contact", element: <Contact /> },
-      { path: "/about", element: <About /> },
+      { path: "/openhours", element: <OpenHours /> },
     ],
   },
 ]);
