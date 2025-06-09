@@ -1,0 +1,25 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+
+.find-us{
+    background: v.$secondary-color;
+    padding:0px 18px 88px;
+    color: v.$primary-text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:48px;
+        h2 {
+            font-size: v.$h2;
+            letter-spacing: 1px;
+            padding: 78px 0px 8px 0px;
+            text-align: center;
+      
+          }
+    }
+}

@@ -7,6 +7,8 @@
 @use "./menu/menu.scss";
 @use "./menu/menu-items.scss";
 @use "./openhours.scss";
+@use "./findus.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -38,10 +40,8 @@ body {
     width: 100%;
 
     @include m.forSize(desktop) {
-
       width: 55%;
       margin:left;
-     background-color: pink;
     }
   }
 }
