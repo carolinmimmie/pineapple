@@ -1,0 +1,54 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+.booking-list {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: v.$primary-color;
+    input,
+    button {
+      width: 25%;
+      opacity: 56%;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    height:100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+    thead {
+        position: sticky;
+        top: 0;
+    }
+    th,
+    td {
+      text-align: left;
+      padding: 4px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+      background-color: #efefef;
+    }
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      cursor:pointer
+    }
+  }
+}

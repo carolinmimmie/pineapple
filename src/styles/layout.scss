@@ -8,6 +8,9 @@
 @use "./menu/menu-items.scss";
 @use "./openhours.scss";
 @use "./findus.scss";
+@use "./bookings/bookings.scss";
+@use "./bookings/booking-form.scss";
+@use "./bookings/booking-list.scss";
 
 * {
   margin: 0;
