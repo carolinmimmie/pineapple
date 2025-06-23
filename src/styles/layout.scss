@@ -1,16 +1,17 @@
 @use "./variables.scss" as v;
 @use "./mixins.scss" as m;
 @use "./header/nav";
-@use "./header/hamburger-modal";
 @use "./header/nav-items";
 @use "./home.scss";
 @use "./menu/menu.scss";
 @use "./menu/menu-items.scss";
 @use "./openhours.scss";
 @use "./findus.scss";
+@use "./pineapple.scss";
 @use "./bookings/bookings.scss";
 @use "./bookings/booking-form.scss";
 @use "./bookings/booking-list.scss";
+
 
 * {
   margin: 0;
@@ -27,15 +28,19 @@ body {
   flex-direction: column;
   width: 100%;
 
+
   @include m.forSize(desktop) {
     flex-direction: row;
   }
 
   .side-nav {
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+
 
     @include m.forSize(desktop) {
-      width: 25%;
+      width: 0%;
     }
   }
 
@@ -44,7 +49,7 @@ body {
 
     @include m.forSize(desktop) {
       width: 55%;
-      margin:left;
+      margin: auto;
     }
   }
 }

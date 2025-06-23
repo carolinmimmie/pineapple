@@ -1,9 +1,7 @@
 @use "../variables" as v;
 @use "../mixins" as m;
 .nav-items {
-  padding: 12px;
   font-family: "Pacifico", cursive;
-
   @include m.forSize(desktop) {
     margin: 180px 20px;
     
@@ -11,10 +9,12 @@
   ul {
     display: flex;
     justify-content: space-between;
-    @include m.forSize(desktop) {
+    padding-top:12px;
+@include m.forSize(desktop) {
       display: flex;
       flex-direction: column;
       gap: 22px;
+      padding-top:0px;
     }
 
     li {
@@ -30,6 +30,11 @@
       a {
         text-decoration: none;
         color: v.$primary-text-color;
+      }
+
+      @include m.forSize(desktop) {
+        padding: 0px 0px 0px 44px;
+   
       }
       a:hover {
         color: v.$secondary-text-color;

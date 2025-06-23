@@ -1,10 +1,10 @@
 // Main Färger
-$primary-color: rgb(192, 215, 175); // Varm, mjuk olivgrön (ersätter blå)
+$primary-color: 	 #a8d5ba;  // Varm, mjuk olivgrön (ersätter blå)
 $secondary-color: white; // Ren kontrast för ljusa ytor
 
 // Text Färg
-$primary-text-color: rgb(60, 80, 45); // Mörk, varmgrön textfärg – mjuk och läsbar
-$secondary-text-color: rgb(242, 143, 25); // Orange för highlights, knappar och detaljer
+$primary-text-color:#3d5b43;  // Mörk, varmgrön textfärg – mjuk och läsbar
+$secondary-text-color: rgb(242 143 25) ;// Orange för highlights, knappar och detaljer
 
 // Fonts
 $font-primary: Gotham Round, sans-serif;
@@ -16,7 +16,7 @@ $font-semibold: 600;
 $font-bold: 700;
 
 // Font storlekar
-$h2: 36px;
+$h2: 32px;
 $h3: 16px;
 $h4: 12px;
 

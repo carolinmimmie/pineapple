@@ -6,6 +6,7 @@ import Bookings from "./pages/Bookings";
 import Menu from "./pages/Menu";
 import OpenHours from "./pages/OpenHours";
 import FindUs from "./pages/FindUs";
+import Pineapple from "./pages/Pineapple";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/pineapple", element: <Pineapple /> },
       { path: "/boka-bord", element: <Bookings /> },
       { path: "/meny", element: <Menu /> },
       { path: "/hitta-hit", element: <FindUs /> },

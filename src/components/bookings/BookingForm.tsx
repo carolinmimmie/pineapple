@@ -2,9 +2,12 @@ import { useState, type ChangeEvent, type FormEvent } from "react";
 import type { Booking } from "../../models/interfaces";
 interface IBookingForm {
   handleBooking: (booking: Booking) => void;
+  bookings: Booking[];
 }
 
-const BookingForm = ({ handleBooking }: IBookingForm) => {
+const BookingForm = ({ handleBooking, bookings }: IBookingForm) => {
+  const MAX_BOOKINGS_PER_TIME = 15;
+
   const [formData, setFormData] = useState<Booking>({
     id: "",
     firstName: "",
@@ -28,6 +31,16 @@ const BookingForm = ({ handleBooking }: IBookingForm) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    const currentBookings = bookings.filter(
+      (booking) =>
+        booking.date === formData.date && booking.time === formData.time
+    );
+
+    if (currentBookings.length >= MAX_BOOKINGS_PER_TIME) {
+      alert("Fullbokat!");
+      return;
+    }
 
     handleBooking({
       ...formData,
@@ -55,6 +68,8 @@ const BookingForm = ({ handleBooking }: IBookingForm) => {
             name="date"
             value={formData.date}
             onChange={handleChange}
+            min={new Date().toISOString().slice(0, 10)}
+            max={"2025-12-31"}
             required
           />
         </div>

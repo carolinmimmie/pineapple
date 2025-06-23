@@ -27,7 +27,7 @@ const Bookings = () => {
     <div className="bookings">
       <section>
         <h2>Boka bord</h2>
-        <BookingForm handleBooking={handleBooking} />
+        <BookingForm handleBooking={handleBooking} bookings={bookings} />
         <BookingList bookings={bookings} />
       </section>
     </div>

@@ -2,7 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const links = [
-  { path: "/", label: "Pineapple" },
+  { path: "/pineapple", label: "Pineapple" },
   { path: "/meny", label: "Meny" },
   { path: "/oppet-tider", label: "Öppettider" },
   { path: "/boka-bord", label: "Boka bord" },
