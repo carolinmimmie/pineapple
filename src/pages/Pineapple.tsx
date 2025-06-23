@@ -19,7 +19,7 @@ const Pineapple = () => {
           </p>
           <div>
             <img
-              src="/public/sisters.jpg"
+              src="/sisters.jpg"
               alt="image of the two owners of the restaurant"
             />
           </div>
