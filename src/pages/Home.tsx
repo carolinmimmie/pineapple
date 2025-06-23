@@ -12,6 +12,14 @@ const Home = () => {
     "/assets/home10.webp",
     "/assets/home11.webp",
     "/assets/home12.webp",
+    "/assets/home13.webp",
+    "/assets/home14.webp",
+    "/assets/home15.webp",
+    "/assets/home16.webp",
+    "/assets/home17.webp",
+    "/assets/home18.webp",
+    "/assets/home19.webp",
+    "/assets/home20.webp",
   ];
   return (
     <div className="home">
