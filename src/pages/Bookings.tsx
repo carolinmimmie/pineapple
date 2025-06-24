@@ -24,7 +24,7 @@ const Bookings = () => {
       .catch((err) => console.error("Fel vid skapande av ny bokning", err));
   };
   return (
-    <div className="bookings">
+    <div className="page-content">
       <section>
         <h2>Boka bord</h2>
         <BookingForm handleBooking={handleBooking} bookings={bookings} />

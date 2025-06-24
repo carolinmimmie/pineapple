@@ -3,7 +3,7 @@ import type { IMenuCategory } from "../models/IMenu";
 const MenuItems = ({ title, items }: IMenuCategory) => {
   return (
     <section>
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       <div className="menu-items-border"></div>
       <div className="menu-items-container">
         <ul>

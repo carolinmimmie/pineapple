@@ -17,7 +17,6 @@ const Menu = () => {
           />
         ))}
       </div>
-
       <h2>Dryck</h2>
       <div className="menu-row">
         {drinkMenus.map((menu, i) => (

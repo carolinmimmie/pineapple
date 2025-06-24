@@ -11,6 +11,7 @@ form {
 
     input,
     select {
+      font-family: v.$font-body;
       padding: 10px;
       width: 100%;
       border: 1px solid v.$primary-text-color;

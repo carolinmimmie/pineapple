@@ -2,51 +2,37 @@
 @use "../mixins.scss" as m;
 
 .menu {
-    background: v.$secondary-color;
-    padding:0px 18px 88px;
-    color: v.$primary-text-color;
-    display:flex;
-    flex-direction: column;
-    height: 100vh; 
-    overflow-y: scroll;
-    h2 {
-      text-align: center;
-      font-size: v.$h2;
-      letter-spacing: 1px;
-      padding:178px 0px 28px 0px;
-      @include m.forSize(desktop) {
-          margin-bottom: 0rem;
-          padding:128px 0px 38px 0px;
-        }
+  background: v.$secondary-color;
+  padding: 0px 18px 88px;
+  color: v.$primary-text-color;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  h2 {
+    text-align: center;
+    font-size: v.$h2;
+    letter-spacing: 1px;
+    padding: 178px 0px 28px 0px;
+    margin-right:62px;
+    font-family: v.$font-heading;
+    @include m.forSize(desktop) {
+      padding: 88px 0px 48px 0px;
+    
     }
-      .menu-row{
-        width:80%;
-        margin:auto;
-        display:flex;
-        flex-direction: column;
-        gap:46px;
-        @include m.forSize(desktop) {
-          flex-direction: row;
-          flex-wrap: wrap; 
-          gap: 46px;
-          width: 100%;
-          margin-bottom: 42px;
-            
-  
-          }
-        
-        
-       
-
-      }
-   
   }
-  
-
-  
-
-  
- 
-  
- 
-  
+  .menu-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    @include m.forSize(desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 46px;
+      width: 100%;
+      margin-bottom: 42px;
+    }
+  }
+}

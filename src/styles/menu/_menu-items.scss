@@ -7,26 +7,21 @@ section {
   @include m.forSize(desktop) {
     width: 46%;
   }
-  h3 {
-    font-size: v.$h3;
+  h4 {
+    font-size: v.$h4;
+    font-family: v.$font-body;
   }
   .menu-items-border {
     border-bottom: 2px solid v.$primary-text-color;
   }
 }
 .menu-items-container {
-
-
-  @include m.forSize(desktop) {
- 
-
-  }
-
   ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    font-family: v.$font-body;
     @include m.forSize(desktop) {
       gap: 26px;
     }

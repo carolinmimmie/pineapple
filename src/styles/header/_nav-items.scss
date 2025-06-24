@@ -1,7 +1,7 @@
 @use "../variables" as v;
 @use "../mixins" as m;
 .nav-items {
-  font-family: "Pacifico", cursive;
+  font-family: v.$font-heading; 
   @include m.forSize(desktop) {
     margin: 180px 20px;
     

@@ -7,7 +7,8 @@ $primary-text-color:#3d5b43;  // Mörk, varmgrön textfärg – mjuk och läsbar
 $secondary-text-color: rgb(242 143 25) ;// Orange för highlights, knappar och detaljer
 
 // Fonts
-$font-primary: Gotham Round, sans-serif;
+$font-body:'Playfair Display', serif; ;
+$font-heading:'Dancing Script', cursive; ;
 
 // Font Weights
 $font-light: 300;
@@ -17,8 +18,9 @@ $font-bold: 700;
 
 // Font storlekar
 $h2: 32px;
-$h3: 16px;
-$h4: 12px;
+$h3: 22px;
+$h4: 18px;
+$p: 14px;
 
 // Breakpoints
 $desktop: 1028px;

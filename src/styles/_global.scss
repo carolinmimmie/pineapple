@@ -1,0 +1,48 @@
+@use "./variables.scss" as v;
+@use "./mixins.scss" as m;
+.page-content {
+  background: v.$secondary-color;
+  padding: 0px 18px 88px;
+  color: v.$primary-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    h2 {
+      text-align: center;
+      font-size: v.$h2;
+      letter-spacing: 1px;
+      padding-top: 178px;
+      font-family: v.$font-heading;
+
+      @include m.forSize(desktop) {
+        margin-bottom: 0rem;
+        padding-top: 88px;
+      }
+    }
+    p {
+      text-align: center;
+      font-size: v.$p;
+      font-size: v.$font-light;
+      font-family: v.$font-body;
+      line-height: 1.6;
+    }
+    .page-img {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: v.$h3;
+      text-align: center;
+      font-family: v.$font-heading;
+      padding-top: 18px;
+    }
+  }
+}

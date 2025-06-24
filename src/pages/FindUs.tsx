@@ -20,13 +20,13 @@ const FindUs = () => {
   }
 
   return (
-    <div className="find-us">
+    <div className="page-content">
       <section>
         <h2>Hitta hit</h2>
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
           <Marker position={center} />
         </GoogleMap>
-        <h4>Hammarbysjöstad 32, 120 30 Stockholm</h4>
+        <h3>Hammarbysjöstad 32, 120 30 Stockholm</h3>
       </section>
     </div>
   );
