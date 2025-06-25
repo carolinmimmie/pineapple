@@ -40,6 +40,10 @@ const BookingForm = ({ handleBooking, bookings }: IBookingForm) => {
     if (currentBookings.length >= MAX_BOOKINGS_PER_TIME) {
       alert("Fullbokat!");
       return;
+    } else {
+      alert(
+        `Välkommen ${formData.firstName}! Din bokning den ${formData.date} kl ${formData.time}`
+      );
     }
 
     handleBooking({
@@ -47,7 +51,6 @@ const BookingForm = ({ handleBooking, bookings }: IBookingForm) => {
       id: crypto.randomUUID(),
     });
 
-    // Återställ formuläret
     setFormData({
       id: "",
       firstName: "",
@@ -74,9 +77,15 @@ const BookingForm = ({ handleBooking, bookings }: IBookingForm) => {
           />
         </div>
         <div>
-          <select name="time" value={formData.time} onChange={handleChange}>
-            <option value="18-21">Tidig middag (18-21)</option>
-            <option value="21-23">Sen middag (21-23)</option>
+          <select
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            required
+          >
+            <option value="">-- Välj tid --</option>
+            <option value="18-21">Tidig middag (18-21) </option>
+            <option value="21-23">Sen middag (21-23) </option>
           </select>
         </div>
         <div>

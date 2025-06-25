@@ -6,6 +6,11 @@ import axios from "axios";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState<Booking[]>([]);
+  const [showAdmin, setShowAdmin] = useState(false);
+  // vilken rad som redigeras (editingBookingId)
+  const [editingBookingId, setEditingBookingId] = useState<string | null>(null);
+  // värdena under redigeringen (editedBooking)
+  const [editedBooking, setEditedBooking] = useState<Partial<Booking>>({});
 
   useEffect(() => {
     axios
@@ -23,12 +28,62 @@ const Bookings = () => {
       })
       .catch((err) => console.error("Fel vid skapande av ny bokning", err));
   };
+
+  const toggleAdminTable = () => {
+    if (showAdmin === true) {
+      setShowAdmin(false);
+    } else {
+      setShowAdmin(true);
+    }
+  };
+
+  const handleDeleteBooking = (id: string) => {
+    axios
+      .delete(`https://685298890594059b23ce43ac.mockapi.io/bookings/${id}`)
+      .then(() => {
+        setBookings((prev) => prev.filter((b) => b.id !== id));
+      })
+      .catch((err) => console.error("Fel vid borttagning av bokning", err));
+  };
+
+  const handleSaveEdit = (id: string) => {
+    axios
+      .put(
+        `https://685298890594059b23ce43ac.mockapi.io/bookings/${id}`,
+        editedBooking
+      )
+      .then((res) => {
+        setBookings((prev) => prev.map((b) => (b.id === id ? res.data : b)));
+        setEditingBookingId(null);
+        setEditedBooking({});
+      })
+      .catch((err) => console.error("Fel vid uppdatering av bokning", err));
+  };
   return (
     <div className="page-content">
-      <section>
+      <section className="bookings">
         <h2>Boka bord</h2>
-        <BookingForm handleBooking={handleBooking} bookings={bookings} />
-        <BookingList bookings={bookings} />
+        {!showAdmin && (
+          <BookingForm handleBooking={handleBooking} bookings={bookings} />
+        )}
+        {!showAdmin && (
+          <button className="admin-button" onClick={toggleAdminTable}>
+            Visa adminpanelen
+          </button>
+        )}
+
+        {showAdmin && (
+          <BookingList
+            toggleAdminTable={toggleAdminTable}
+            bookings={bookings}
+            handleDeleteBooking={handleDeleteBooking}
+            handleSaveEdit={handleSaveEdit}
+            editingBookingId={editingBookingId}
+            setEditingBookingId={setEditingBookingId}
+            editedBooking={editedBooking}
+            setEditedBooking={setEditedBooking}
+          />
+        )}
       </section>
     </div>
   );

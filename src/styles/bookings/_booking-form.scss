@@ -4,9 +4,8 @@ form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 200px;
     @include m.forSize(desktop) {
-        width: 400px;
+        width: 460px;
       }
 
     input,
