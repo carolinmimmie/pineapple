@@ -1,6 +1,9 @@
 @use "../variables.scss" as v;
 @use "../mixins.scss" as m;
-.booking-list {
+.bookingtable {
+  max-width: 600px;      // max bredd för tabellen
+  width: 100%;           // full bredd inom max-width
+  box-sizing: border-box; // för att paddings och border räknas in
   nav {
     display: flex;
     justify-content: space-between;
@@ -17,25 +20,31 @@
       cursor: pointer;
     }
   }
+  .table-container{
+    overflow-x: auto;  
+    overflow-y: auto;
+    max-width: 100%;
+
 
   table {
-    width: 100%;
+    width: 100%;          
     border-collapse: collapse;
     font-size: 0.8rem;
-    height:100%;
-    overflow-y: scroll;
-    overflow-x: scroll;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     thead {
         position: sticky;
         top: 0;
+        z-index: 1;
     }
     th,
     td {
       text-align: left;
       padding: 4px;
       border-bottom: 1px solid #ccc;
+      max-width: 150px;      
+      word-wrap: break-word;  
+      overflow-wrap: break-word;
     }
 
     tbody tr:nth-child(odd) {
@@ -50,5 +59,11 @@
       justify-content: space-between;
       cursor:pointer
     }
+
+    input, select {
+      width: 100%;        
+      box-sizing: border-box;
+    }
+  }
   }
 }

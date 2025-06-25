@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import BookingForm from "../components/bookings/BookingForm";
-import BookingList from "../components/bookings/BookingList";
 import type { Booking } from "../models/interfaces";
 import axios from "axios";
+import BookingTable from "../components/bookings/BookingTable";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState<Booking[]>([]);
@@ -61,7 +61,7 @@ const Bookings = () => {
   };
   return (
     <div className="page-content">
-      <section className="bookings">
+      <section>
         <h2>Boka bord</h2>
         {!showAdmin && (
           <BookingForm handleBooking={handleBooking} bookings={bookings} />
@@ -73,7 +73,7 @@ const Bookings = () => {
         )}
 
         {showAdmin && (
-          <BookingList
+          <BookingTable
             toggleAdminTable={toggleAdminTable}
             bookings={bookings}
             handleDeleteBooking={handleDeleteBooking}
