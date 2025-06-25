@@ -10,7 +10,6 @@
 @use "./bookings/bookingtable.scss";
 @use "./bookings/bookings.scss";
 
-
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +24,6 @@ body {
   flex-direction: column;
   width: 100%;
 
-
   @include m.forSize(desktop) {
     flex-direction: row;
   }
@@ -34,7 +32,6 @@ body {
     width: 100%;
     position: fixed;
     z-index: 1000;
-
 
     @include m.forSize(desktop) {
       width: 0%;

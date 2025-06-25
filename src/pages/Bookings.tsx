@@ -62,7 +62,8 @@ const Bookings = () => {
   return (
     <div className="page-content">
       <section>
-        <h2>Boka bord</h2>
+        <h2>{!showAdmin ? "Boka bord" : "Bokningar"}</h2>
+
         {!showAdmin && (
           <BookingForm handleBooking={handleBooking} bookings={bookings} />
         )}
