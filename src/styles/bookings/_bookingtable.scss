@@ -1,9 +1,9 @@
 @use "../variables.scss" as v;
 @use "../mixins.scss" as m;
 .bookingtable {
-  max-width: 600px;      // max bredd för tabellen
-  width: 100%;           // full bredd inom max-width
-  box-sizing: border-box; // för att paddings och border räknas in
+  max-width: 600px;     
+  width: 100%;          
+  box-sizing: border-box;
   nav {
     display: flex;
     justify-content: space-between;

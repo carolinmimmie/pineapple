@@ -8,7 +8,9 @@ const NotFound = () => {
         <p>
           Ojdå! Sidan du letar efter finns inte eller har flyttats.
           <br />
-          <Link to="/">Gå tillbaka till startsidan</Link>
+          <Link className="notfound" to="/">
+            Gå tillbaka till startsidan
+          </Link>
         </p>
       </section>
     </div>

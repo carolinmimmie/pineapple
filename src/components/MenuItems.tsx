@@ -1,13 +1,16 @@
 import type { IMenuCategory } from "../models/IMenu";
 
 const MenuItems = ({ title, items }: IMenuCategory) => {
+  const sortedItems = [...items].sort(
+    (a, b) => Number(a.price) - Number(b.price)
+  );
   return (
     <section>
       <h4>{title}</h4>
       <div className="menu-items-border"></div>
       <div className="menu-items-container">
         <ul>
-          {items.map((menuItems, i) => (
+          {sortedItems.map((menuItems, i) => (
             <li key={i}>
               <span className="dish-name">
                 {menuItems.name}{" "}

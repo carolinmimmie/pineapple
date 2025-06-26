@@ -3,11 +3,14 @@ import type { Booking } from "../../models/interfaces";
 interface IBookingForm {
   handleBooking: (booking: Booking) => void;
   bookings: Booking[];
+  isSlotAvailable: (bookings: Booking[], date: string, time: string) => boolean;
 }
 
-const BookingForm = ({ handleBooking, bookings }: IBookingForm) => {
-  const MAX_BOOKINGS_PER_TIME = 15;
-
+const BookingForm = ({
+  handleBooking,
+  bookings,
+  isSlotAvailable,
+}: IBookingForm) => {
   const [formData, setFormData] = useState<Booking>({
     id: "",
     firstName: "",
@@ -32,20 +35,14 @@ const BookingForm = ({ handleBooking, bookings }: IBookingForm) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const currentBookings = bookings.filter(
-      (booking) =>
-        booking.date === formData.date && booking.time === formData.time
-    );
-
-    if (currentBookings.length >= MAX_BOOKINGS_PER_TIME) {
+    if (!isSlotAvailable(bookings, formData.date, formData.time)) {
       alert("Fullbokat!");
       return;
-    } else {
-      alert(
-        `Välkommen ${formData.firstName}! Din bokning den ${formData.date} kl ${formData.time}`
-      );
     }
 
+    alert(
+      `Välkommen ${formData.firstName}! Din bokning den ${formData.date} kl ${formData.time}`
+    );
     handleBooking({
       ...formData,
       id: crypto.randomUUID(),
