@@ -60,7 +60,7 @@ const BookingForm = ({
   };
 
   return (
-    <>
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
         <div>
           <input
@@ -131,7 +131,7 @@ const BookingForm = ({
         </div>
         <button type="submit">Boka</button>
       </form>
-    </>
+    </div>
   );
 };
 
