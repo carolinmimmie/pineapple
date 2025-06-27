@@ -5,8 +5,8 @@ const OpenHours = () => {
         <h2>Våra tider</h2>
         <p>
           Dyk in när andan faller på – ta en öl efter jobbet, häng med kompisar,
-          gå på en spontan dejt eller stilla den där plötspga hungern. Vi håller
-          dörrarna öppna (nästan) varje dag!
+          gå på en spontan dejt eller stilla den där plötsliga hungern. Vi
+          håller dörrarna öppna (nästan) varje dag!
         </p>
       </section>
       <br />
