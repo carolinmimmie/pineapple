@@ -123,7 +123,7 @@ export const menuData: IMenuCategory[] = [
   },
   {
     type: "food",
-    title: "Sweets",
+    title: "Sött",
     items: [
       {
         name: "Tiramisu",
@@ -172,7 +172,7 @@ export const menuData: IMenuCategory[] = [
   },
   {
     type: "drink",
-    title: "Red",
+    title: "Rött",
     items: [
       {
         name: "Cabernet Sauvignon",
@@ -193,7 +193,7 @@ export const menuData: IMenuCategory[] = [
   },
   {
     type: "drink",
-    title: "White",
+    title: "Vitt",
     items: [
       {
         name: "Chardonnay",
@@ -214,7 +214,7 @@ export const menuData: IMenuCategory[] = [
   },
   {
     type: "drink",
-    title: "Beers",
+    title: "Öl",
     items: [
       {
         name: "Ljus Lager",
@@ -235,7 +235,7 @@ export const menuData: IMenuCategory[] = [
   },
   {
     type: "drink",
-    title: "Cocktails",
+    title: "Drinkar",
     items: [
       {
         name: "Mojito",
